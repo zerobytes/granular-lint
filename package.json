@@ -23,7 +23,13 @@
   ],
   "scripts": {
     "test": "node ./scripts/run-tests.mjs",
-    "lint:self": "node ./bin/granular-lint.js src tests/fixtures"
+    "lint:self": "node ./bin/granular-lint.js src tests/fixtures",
+    "prepublishOnly": "npm test",
+    "version": "git add -A",
+    "postversion": "git push && git push origin v$(node -p \"require('./package.json').version\")",
+    "release:patch": "./release.sh patch",
+    "release:minor": "./release.sh minor",
+    "release:major": "./release.sh major"
   },
   "dependencies": {
     "@babel/parser": "^7.29.0",
