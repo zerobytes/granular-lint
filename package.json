@@ -1,6 +1,6 @@
 {
   "name": "@granularjs/lint",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Linter for the Granular framework. Understands both the canonical tag-function syntax (@granularjs/core) and the optional JSX runtime (@granularjs/jsx). Detects anti-patterns, common mistakes, and best-practice violations.",
   "type": "commonjs",
   "main": "./src/index.js",
