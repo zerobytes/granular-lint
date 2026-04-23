@@ -1,0 +1,54 @@
+{
+  "name": "@granularjs/lint",
+  "version": "0.1.0",
+  "description": "Linter for the Granular framework. Understands both the canonical tag-function syntax (@granularjs/core) and the optional JSX runtime (@granularjs/jsx). Detects anti-patterns, common mistakes, and best-practice violations.",
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "bin": {
+    "granular-lint": "./bin/granular-lint.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./rules/*": "./src/rules/*.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node ./scripts/run-tests.mjs",
+    "lint:self": "node ./bin/granular-lint.js src tests/fixtures"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.0",
+    "@babel/traverse": "^7.29.0",
+    "@babel/types": "^7.29.0",
+    "@babel/code-frame": "^7.27.0"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "granular",
+    "granularjs",
+    "lint",
+    "linter",
+    "static-analysis",
+    "jsx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerobytes/granular-lint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zerobytes/granular-lint/issues"
+  },
+  "homepage": "https://github.com/zerobytes/granular-lint#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
