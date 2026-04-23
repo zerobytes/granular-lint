@@ -4,7 +4,7 @@ const { REACT_HOOKS } = require('../utils/granular-imports');
 
 const SUGGESTIONS = {
   useState: 'Use `state(initial)` from @granularjs/core instead. Granular has no re-render: only DOM bindings update.',
-  useEffect: 'Use `after(...targets).change(fn)` from @granularjs/core for side-effects on change. Mount logic goes directly in the component body (the function runs once).',
+  useEffect: 'Use `after(...targets).effect(fn)` from @granularjs/core to mirror React semantics (run once on construction with current values + re-run on change). Use `after(...targets).change(fn)` if you only want change events without the initial run.',
   useMemo: 'Use `after(...targets).compute(fn)` for derived reactive values.',
   useCallback: 'Granular components run once - regular functions/arrow functions are stable references and do not need memoization.',
   useRef: 'Use `state(null)` and the `node` prop on a tag (e.g. `Input({ node: ref })`) to capture the DOM element.',

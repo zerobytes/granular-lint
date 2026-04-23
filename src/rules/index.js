@@ -27,6 +27,7 @@ const RULE_FILES = [
   'no-empty-props-object',
   'prefer-and-over-ternary-null',
   'no-state-truthy-and',
+  'no-strict-equal-on-state-path',
   'no-compute-returning-tree',
   'match-arrow-functions',
 ];
